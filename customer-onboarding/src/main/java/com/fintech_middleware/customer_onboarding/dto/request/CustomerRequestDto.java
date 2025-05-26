@@ -1,5 +1,6 @@
 package com.fintech_middleware.customer_onboarding.dto.request;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.UniqueConstraint;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -25,10 +26,20 @@ public class CustomerRequestDto {
 
     @NotBlank(message = "Email is required")
     @Email(message = "Email should be valid")
+    @Column(unique = true)
     private String email;
 
     @NotBlank(message = "DOB is required")
     private String dateOfBirth;
+
+    @NotBlank(message = "phone number is required")
+    @Size(min = 11, max = 11, message = "phone number must be 11 digits")
+    private String phoneNumber;
+
+    @NotBlank(message = "password is required")
+    private String password;
+
+
 
 
 

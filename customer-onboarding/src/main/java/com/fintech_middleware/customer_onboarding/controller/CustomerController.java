@@ -1,6 +1,8 @@
 package com.fintech_middleware.customer_onboarding.controller;
 
 import com.fintech_middleware.customer_onboarding.dto.request.CustomerRequestDto;
+import com.fintech_middleware.customer_onboarding.dto.request.LoginRequest;
+import com.fintech_middleware.customer_onboarding.dto.response.AuthResponse;
 import com.fintech_middleware.customer_onboarding.dto.response.CustomerResponseDto;
 import com.fintech_middleware.customer_onboarding.service.CustomerService;
 import jakarta.validation.Valid;
@@ -39,6 +41,11 @@ public class CustomerController {
         }
 
         return ResponseEntity.ok(customers);
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<AuthResponse> login(@RequestBody LoginRequest request) {
+        return ResponseEntity.ok(customerService.login(request));
     }
 
 

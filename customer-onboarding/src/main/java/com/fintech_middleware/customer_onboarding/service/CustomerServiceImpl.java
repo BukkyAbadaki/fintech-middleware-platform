@@ -1,11 +1,16 @@
 package com.fintech_middleware.customer_onboarding.service;
 
+import com.fintech_middleware.customer_onboarding.config.JwtUtil;
 import com.fintech_middleware.customer_onboarding.domain.Customer;
 import com.fintech_middleware.customer_onboarding.dto.request.CustomerRequestDto;
+import com.fintech_middleware.customer_onboarding.dto.request.LoginRequest;
+import com.fintech_middleware.customer_onboarding.dto.response.AuthResponse;
 import com.fintech_middleware.customer_onboarding.dto.response.CustomerResponseDto;
 import com.fintech_middleware.customer_onboarding.repository.CustomerRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Collections;
@@ -20,17 +25,52 @@ import java.util.stream.Collectors;
 public class CustomerServiceImpl implements CustomerService {
 
     private final CustomerRepository customerRepository;
+    private final MockIdentityVerificationService identityVerificationService;
+    private final PasswordEncoder passwordEncoder;
+    private final JwtUtil jwtUtil;
+
+
+
 
     @Override
     public CustomerResponseDto onboardCustomer(CustomerRequestDto requestDto) {
-
         try {
+            // Check if email already exists
+            Optional<Customer> existingCustomer = customerRepository.findByEmail(requestDto.getEmail());
+            if (existingCustomer.isPresent()) {
+                return CustomerResponseDto.builder()
+                        .responseCode("001")
+                        .responseMessage("Email already exists")
+                        .build();
+            }
+            // 👉 Verify BVN and NIN
+            boolean isBvnValid = identityVerificationService.verifyBvn(requestDto.getBvn());
+            boolean isNinValid = identityVerificationService.verifyNin(requestDto.getNin());
+
+            if (!isBvnValid) {
+                return CustomerResponseDto.builder()
+                        .responseCode("002")
+                        .responseMessage("Invalid BVN")
+                        .build();
+            }
+
+            if (!isNinValid) {
+                return CustomerResponseDto.builder()
+                        .responseCode("003")
+                        .responseMessage("Invalid NIN")
+                        .build();
+            }
+
+
             // Save new customer
             Customer customer = Customer.builder()
                     .fullName(requestDto.getFullName())
                     .bvn(requestDto.getBvn())
                     .nin(requestDto.getNin())
+                    .dateOfBirth(requestDto.getDateOfBirth())
+                    .phoneNumber(requestDto.getPhoneNumber())
                     .email(requestDto.getEmail())
+                    .password(passwordEncoder.encode(requestDto.getPassword()))
                     .isVerified(true)
                     .build();
 
@@ -47,25 +87,17 @@ public class CustomerServiceImpl implements CustomerService {
                     .responseMessage("Success")
                     .build();
 
-        } catch (DataIntegrityViolationException ex) {
-            // Likely due to unique constraint violations
-            return CustomerResponseDto.builder()
-                    .responseCode("002")
-                    .responseMessage("Account already exist")
-                    .build();
-
         } catch (Exception ex) {
-            // Log the exception if needed
-            ex.printStackTrace(); // Or use a logger
-
+            ex.printStackTrace(); // Or log it
             return CustomerResponseDto.builder()
                     .responseCode("999")
                     .responseMessage("An unexpected error occurred")
                     .build();
         }
-}
+    }
 
 
+    @Override
     public CustomerResponseDto getCustomerById(Long id) {
         try {
             Customer customer = customerRepository.findById(id)
@@ -95,7 +127,7 @@ public class CustomerServiceImpl implements CustomerService {
                     .build();
         }
     }
-
+    @Override
     public List<CustomerResponseDto> getAllCustomers() {
         try {
             List<Customer> customers = customerRepository.findAll();
@@ -131,6 +163,19 @@ public class CustomerServiceImpl implements CustomerService {
             );
         }
     }
+    @Override
+    public AuthResponse login(LoginRequest request) {
+        Customer user = customerRepository.findByEmail(request.getEmail())
+                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+
+        if (!passwordEncoder.matches(request.getPassword(), user.getPassword())) {
+            throw new BadCredentialsException("Invalid password");
+        }
+
+        String token = jwtUtil.generateToken(user.getEmail());
+        return new AuthResponse(token,"000","login successful" );
+    }
+
 
 
 }

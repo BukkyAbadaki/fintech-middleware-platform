@@ -14,5 +14,7 @@ public class CustomerResponseDto {
     private String bvn;
     private String nin;
     private String email;
+    private String phoneNumber;
+
 
 }

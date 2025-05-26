@@ -19,10 +19,10 @@ public class Customer {
 
     private String fullName;
 
-    @Column(unique = true)
+    private String password;
+
     private String bvn;
 
-    @Column(unique = true)
     private String nin;
 
     @Column(unique = true, nullable = false)
@@ -30,6 +30,8 @@ public class Customer {
 
     private boolean isVerified;
     private String dateOfBirth;
+    private String phoneNumber;
+
 
 
 
