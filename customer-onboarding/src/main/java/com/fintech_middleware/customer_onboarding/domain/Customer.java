@@ -25,9 +25,12 @@ public class Customer {
     @Column(unique = true)
     private String nin;
 
+    @Column(unique = true, nullable = false)
     private String email;
 
     private boolean isVerified;
+    private String dateOfBirth;
+
 
 
 }

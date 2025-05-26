@@ -51,7 +51,7 @@ public class CustomerServiceImpl implements CustomerService {
             // Likely due to unique constraint violations
             return CustomerResponseDto.builder()
                     .responseCode("002")
-                    .responseMessage("Duplicate BVN or NIN")
+                    .responseMessage("Account already exist")
                     .build();
 
         } catch (Exception ex) {

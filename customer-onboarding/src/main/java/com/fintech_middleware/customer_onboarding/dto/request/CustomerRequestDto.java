@@ -27,5 +27,9 @@ public class CustomerRequestDto {
     @Email(message = "Email should be valid")
     private String email;
 
+    @NotBlank(message = "DOB is required")
+    private String dateOfBirth;
+
+
 
 }
