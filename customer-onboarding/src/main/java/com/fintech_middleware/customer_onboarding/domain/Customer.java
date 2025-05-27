@@ -31,6 +31,8 @@ public class Customer {
     private boolean isVerified;
     private String dateOfBirth;
     private String phoneNumber;
+    private String roles;
+
 
 
 

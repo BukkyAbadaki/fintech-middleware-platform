@@ -39,6 +39,7 @@ public class CustomerRequestDto {
     @NotBlank(message = "password is required")
     private String password;
 
+    private String roles;
 
 
 

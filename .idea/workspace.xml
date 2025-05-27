@@ -3,8 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="5e76216c-7198-47d1-a977-4dd3ebc077af" name="Changes" comment="my commits">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auth-Service 2/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Auth-Service 2/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auth-Service 2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Auth-Service 2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-onboarding/src/main/java/com/fintech_middleware/customer_onboarding/domain/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-onboarding/src/main/java/com/fintech_middleware/customer_onboarding/domain/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-onboarding/src/main/java/com/fintech_middleware/customer_onboarding/dto/request/CustomerRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-onboarding/src/main/java/com/fintech_middleware/customer_onboarding/dto/request/CustomerRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-onboarding/src/main/java/com/fintech_middleware/customer_onboarding/dto/response/CustomerResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-onboarding/src/main/java/com/fintech_middleware/customer_onboarding/dto/response/CustomerResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-onboarding/src/main/java/com/fintech_middleware/customer_onboarding/service/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-onboarding/src/main/java/com/fintech_middleware/customer_onboarding/service/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-onboarding/target/classes/com/fintech_middleware/customer_onboarding/domain/Customer$CustomerBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/customer-onboarding/target/classes/com/fintech_middleware/customer_onboarding/domain/Customer$CustomerBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-onboarding/target/classes/com/fintech_middleware/customer_onboarding/domain/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/customer-onboarding/target/classes/com/fintech_middleware/customer_onboarding/domain/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-onboarding/target/classes/com/fintech_middleware/customer_onboarding/dto/request/CustomerRequestDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/customer-onboarding/target/classes/com/fintech_middleware/customer_onboarding/dto/request/CustomerRequestDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-onboarding/target/classes/com/fintech_middleware/customer_onboarding/dto/response/CustomerResponseDto$CustomerResponseDtoBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/customer-onboarding/target/classes/com/fintech_middleware/customer_onboarding/dto/response/CustomerResponseDto$CustomerResponseDtoBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-onboarding/target/classes/com/fintech_middleware/customer_onboarding/dto/response/CustomerResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/customer-onboarding/target/classes/com/fintech_middleware/customer_onboarding/dto/response/CustomerResponseDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-onboarding/target/classes/com/fintech_middleware/customer_onboarding/service/CustomerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/customer-onboarding/target/classes/com/fintech_middleware/customer_onboarding/service/CustomerServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +75,7 @@
       <workItem from="1748205522833" duration="318000" />
       <workItem from="1748205855767" duration="90000" />
       <workItem from="1748205970788" duration="345000" />
-      <workItem from="1748246824285" duration="2330000" />
+      <workItem from="1748246824285" duration="5334000" />
     </task>
     <task id="LOCAL-00001" summary="my commit">
       <created>1748200067898</created>
@@ -132,7 +140,21 @@
       <option name="project" value="LOCAL" />
       <updated>1748290513777</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="my commits">
+      <created>1748290645573</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1748290645573</updated>
+    </task>
+    <task id="LOCAL-00011" summary="my commits">
+      <created>1748290825598</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1748290825598</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -13,10 +13,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.NoSuchElementException;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 
@@ -146,6 +143,7 @@ public class CustomerServiceImpl implements CustomerService {
                             .id(customer.getId())
                             .fullName(customer.getFullName())
                             .bvn(customer.getBvn())
+                            .roles(customer.getRoles())
                             .nin(customer.getNin())
                             .email(customer.getEmail())
                             .responseCode("000")
@@ -171,6 +169,11 @@ public class CustomerServiceImpl implements CustomerService {
         if (!passwordEncoder.matches(request.getPassword(), user.getPassword())) {
             throw new BadCredentialsException("Invalid password");
         }
+
+        Map<String, Object> claims = new HashMap<>();
+        claims.put("sub", user.getEmail());
+        claims.put("authorities", List.of(user.getRoles())); // ✅ Add the role here
+
 
         String token = jwtUtil.generateToken(user.getEmail());
         return new AuthResponse(token,"000","login successful" );
