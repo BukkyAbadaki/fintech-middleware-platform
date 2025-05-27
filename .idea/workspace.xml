@@ -2,17 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e76216c-7198-47d1-a977-4dd3ebc077af" name="Changes" comment="my commits">
+      <change afterPath="$PROJECT_DIR$/bills-payment-Service/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bills-payment-Service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bills-payment-Service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bills-payment-Service/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bills-payment-Service/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bills-payment-Service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bills-payment-Service/src/main/java/com/fintech_middleware/bills_payment_Service/BillsPaymentServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bills-payment-Service/src/main/java/com/fintech_middleware/bills_payment_Service/config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bills-payment-Service/src/main/java/com/fintech_middleware/bills_payment_Service/config/OnboardingClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bills-payment-Service/src/main/java/com/fintech_middleware/bills_payment_Service/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bills-payment-Service/src/main/java/com/fintech_middleware/bills_payment_Service/controller/BillerCategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bills-payment-Service/src/main/java/com/fintech_middleware/bills_payment_Service/controller/BillerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bills-payment-Service/src/main/java/com/fintech_middleware/bills_payment_Service/domain/BillerCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bills-payment-Service/src/main/java/com/fintech_middleware/bills_payment_Service/domain/Billers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bills-payment-Service/src/main/java/com/fintech_middleware/bills_payment_Service/dto/request/BillerCategoryDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bills-payment-Service/src/main/java/com/fintech_middleware/bills_payment_Service/dto/request/BillerRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bills-payment-Service/src/main/java/com/fintech_middleware/bills_payment_Service/dto/request/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bills-payment-Service/src/main/java/com/fintech_middleware/bills_payment_Service/dto/response/BillerCategoryListResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bills-payment-Service/src/main/java/com/fintech_middleware/bills_payment_Service/repository/BillerCategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bills-payment-Service/src/main/java/com/fintech_middleware/bills_payment_Service/repository/BillerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bills-payment-Service/src/main/java/com/fintech_middleware/bills_payment_Service/service/BillerCategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bills-payment-Service/src/main/java/com/fintech_middleware/bills_payment_Service/service/BillerCategoryServiceImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bills-payment-Service/src/main/java/com/fintech_middleware/bills_payment_Service/service/BillerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bills-payment-Service/src/main/java/com/fintech_middleware/bills_payment_Service/service/BillerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bills-payment-Service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bills-payment-Service/src/test/java/com/fintech_middleware/bills_payment_Service/BillsPaymentServiceApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-onboarding/src/main/java/com/fintech_middleware/customer_onboarding/domain/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-onboarding/src/main/java/com/fintech_middleware/customer_onboarding/domain/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-onboarding/src/main/java/com/fintech_middleware/customer_onboarding/dto/request/CustomerRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-onboarding/src/main/java/com/fintech_middleware/customer_onboarding/dto/request/CustomerRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-onboarding/src/main/java/com/fintech_middleware/customer_onboarding/dto/response/CustomerResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-onboarding/src/main/java/com/fintech_middleware/customer_onboarding/dto/response/CustomerResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-onboarding/src/main/java/com/fintech_middleware/customer_onboarding/service/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-onboarding/src/main/java/com/fintech_middleware/customer_onboarding/service/CustomerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-onboarding/target/classes/com/fintech_middleware/customer_onboarding/domain/Customer$CustomerBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/customer-onboarding/target/classes/com/fintech_middleware/customer_onboarding/domain/Customer$CustomerBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-onboarding/target/classes/com/fintech_middleware/customer_onboarding/domain/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/customer-onboarding/target/classes/com/fintech_middleware/customer_onboarding/domain/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-onboarding/target/classes/com/fintech_middleware/customer_onboarding/dto/request/CustomerRequestDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/customer-onboarding/target/classes/com/fintech_middleware/customer_onboarding/dto/request/CustomerRequestDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-onboarding/target/classes/com/fintech_middleware/customer_onboarding/dto/response/CustomerResponseDto$CustomerResponseDtoBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/customer-onboarding/target/classes/com/fintech_middleware/customer_onboarding/dto/response/CustomerResponseDto$CustomerResponseDtoBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-onboarding/target/classes/com/fintech_middleware/customer_onboarding/dto/response/CustomerResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/customer-onboarding/target/classes/com/fintech_middleware/customer_onboarding/dto/response/CustomerResponseDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-onboarding/target/classes/com/fintech_middleware/customer_onboarding/service/CustomerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/customer-onboarding/target/classes/com/fintech_middleware/customer_onboarding/service/CustomerServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +91,7 @@
       <workItem from="1748205522833" duration="318000" />
       <workItem from="1748205855767" duration="90000" />
       <workItem from="1748205970788" duration="345000" />
-      <workItem from="1748246824285" duration="5334000" />
+      <workItem from="1748246824285" duration="5999000" />
     </task>
     <task id="LOCAL-00001" summary="my commit">
       <created>1748200067898</created>
@@ -154,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1748290825598</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="my commits">
+      <created>1748334986234</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1748334986234</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
